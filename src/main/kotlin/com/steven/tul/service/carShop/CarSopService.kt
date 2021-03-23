@@ -102,6 +102,8 @@ class CarSopService : ICarShopService {
         val carShopDto: Optional<CarShop> = iCarShopFacade.findCarShop(user.get())
         if (!carShopDto.isPresent)
             return ResponseEntity(HttpStatus.CONFLICT)
+        if(carShopDto.get().detailCarShops.isNullOrEmpty())
+            return ResponseEntity(HttpStatus.CONFLICT)
         var total = 0
         for (item in carShopDto.get().detailCarShops!!) {
             total += if (item.product!!.type == TypeProduct.DESCUENTO)
