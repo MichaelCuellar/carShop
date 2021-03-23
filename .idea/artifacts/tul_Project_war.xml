@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="tul_Project:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>tul_Project</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="tul-0.0.1-SNAPSHOT.war">
+      <element id="artifact" artifact-name="tul_Project:war exploded" />
+    </root>
+  </artifact>
+</component>
